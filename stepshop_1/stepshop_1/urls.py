@@ -21,10 +21,10 @@ from stepshop_1.views import index, contact, about
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index),
-    path('contacts/', contact),
-    path('about/', about),
-    path('products/', include('mainapp.urls')),
+    path('', index, name='index'),
+    path('contacts/', contact, name='contacts'),
+    path('about/', about, name='about'),
+    path('products/', include('mainapp.urls', namespace='products'))
 
 
 ]
