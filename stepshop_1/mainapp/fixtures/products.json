@@ -1,0 +1,32 @@
+[
+  {
+    "model": "mainapp.product",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "name": "Джинсы",
+      "image": "product_images/C_sharp_FdsVv6C.png",
+      "short_desc": "",
+      "description": "Отлично практично удобно",
+      "price": "0.00",
+      "quantity": 0,
+      "created_at": "2022-06-02T09:23:03.036Z",
+      "update_at": "2022-06-02T09:25:04.903Z"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 2,
+    "fields": {
+      "category": 1,
+      "name": "Топы",
+      "image": "",
+      "short_desc": "Всякие блузы, рубахи",
+      "description": "",
+      "price": "500.00",
+      "quantity": 3,
+      "created_at": "2022-06-02T09:48:00.497Z",
+      "update_at": "2022-06-02T09:51:04.183Z"
+    }
+  }
+]
