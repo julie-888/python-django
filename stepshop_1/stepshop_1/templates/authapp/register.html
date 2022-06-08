@@ -1,0 +1,61 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title %}
+    {{ title|capfirst }}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+    <h1>{{ title|capfirst }}<h1>
+
+    <div class="row">
+        <div class="mx-auto col-3">
+            <form class="form-horizontal" action="{% url 'auth:register' %}" method="post"enctype="multipart/form-data">
+                {% csrf_token %}
+                <p>
+                    <label for="login">Логин: </label>
+                        {{ register_form.username }}
+
+                </p>
+                   <p>
+                    <label>Имя:
+                        {{ register_form.first_name }}
+                    </label>
+                </p>
+                   <p>
+                    <label>Пароль:
+                        {{ register_form.password1 }}
+                    </label>
+                </p>
+                   <p>
+                    <label>Подтверждение пароля:
+                        {{ register_form.password2 }}
+                    </label>
+                </p>
+                     <p>
+                    <label>Мэйл:
+                        {{ register_form.email }}
+                    </label>
+                </p>
+                   <p>
+                    <label>Возраст:
+                        {{ register_form.age }}
+                    </label>
+                </p>
+                   <p>
+                    <label>Аватар:
+                        {{ register_form.avatar }}
+                    </label>
+                </p>
+
+                <button type="submit" class="btn btn-primary">Зарегиться</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+
+

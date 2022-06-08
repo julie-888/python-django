@@ -1,14 +1,11 @@
-from django.contrib.auth import login
 from django.urls import path
 
-from mainapp.views import products, product
+from authapp.views import login, logout, register
 
 app_name = 'auth'
 
 urlpatterns = [
     path('login/', login, name='login'),
-    path('logout/', login, name='login'),
-
-
-
+    path('register/', register, name='register'),
+    path('logout/', logout, name='logout'),
 ]
