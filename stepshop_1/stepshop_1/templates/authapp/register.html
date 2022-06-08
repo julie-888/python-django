@@ -7,8 +7,7 @@
 
 {% block content %}
     <div class="container">
-    <h1>{{ title|capfirst }}<h1>
-
+    <h1>{{ title|capfirst }}</h1>
     <div class="row">
         <div class="mx-auto col-3">
             <form class="form-horizontal" action="{% url 'auth:register' %}" method="post"enctype="multipart/form-data">
@@ -53,9 +52,6 @@
             </form>
         </div>
     </div>
+    </div>
 
 {% endblock %}
-
-
-
-

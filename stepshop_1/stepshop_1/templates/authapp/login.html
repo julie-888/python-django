@@ -14,17 +14,23 @@
             <form class="form-horizontal" action="{% url 'auth:login' %}" method="post">
                 {% csrf_token %}
                 {{ login_form.as_p }}
+                <center>
+                <br>
                 <button type="submit" class="btn btn-primary">Войти</button>
             </form>
+            <br>
+
+            <br>
                  <button class="btn btn-round btn-primary">
             <a href="{% url 'auth:register' %}" class="text-light">
-                Зарегиться
+                Зарегистрироваться
             </a>
+                     </center>
         </button>
         </div>
     </div>
     </div>
-
+<br>
 {% endblock %}
 
 
