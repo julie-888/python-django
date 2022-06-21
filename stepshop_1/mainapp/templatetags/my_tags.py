@@ -1,6 +1,5 @@
 from django import template
-from stepshop_1\
-    import settings
+from stepshop_1 import settings
 register = template.Library()
 
 

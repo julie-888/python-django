@@ -1,5 +1,5 @@
-import basket as basket
 from django.urls import path
+
 from basketapp.views import basket, basket_add, basket_remove
 
 app_name = 'basketapp'
