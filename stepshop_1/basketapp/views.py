@@ -5,6 +5,7 @@ from django.urls import reverse
 
 from basketapp.models import Basket
 from mainapp.models import Product
+from mainapp.views import links_menu
 
 
 @login_required()
@@ -13,6 +14,7 @@ def basket(request):
         basket_ = Basket.objects.filter(user=request.user)
 
         context = {
+            'links_menu': links_menu,
             'basket': basket_,
         }
 

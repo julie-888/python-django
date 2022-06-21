@@ -18,9 +18,10 @@
             <form class="form-horizontal" action="{% url 'auth:edit' %}" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                {{ edit_form.as_p }}
-
+<br>
                 <button type="submit" class="btn btn-primary">Сохранить</button>
             </form>
+<br>
             <button class="btn btn-primary">
                 <a href="{% url 'index' %}" class="text-light">На главную</a>
             </button>
