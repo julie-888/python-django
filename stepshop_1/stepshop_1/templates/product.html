@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load my_tags %}
 
 {% block title %}
 {{title|capfirst}}
@@ -18,7 +19,7 @@
             </div>
           </div>
           <div class="col-md-6">
-           <img src="/media/{{ product.image }}" alt="{{ product.name }}" class="w-100">
+           <img src="{{ product.image|media_folder_products }}" alt="{{ product.name }}" class="w-100">
           </div>
           <div class="col-md-6">
             <div class="right-content">

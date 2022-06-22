@@ -4,6 +4,14 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 
 from authapp.forms import ShopUserLoginForm, ShopUserRegisterForm, ShopUserEditForm
+from mainapp.models import Product, ProductCategory
+
+links_menu = [
+    {'href': 'index', 'name': 'Домой', 'route': ''},
+    {'href': 'products:index', 'name': 'Продукты', 'route': 'products/'},
+    {'href': 'about', 'name': 'О&nbsp;нас', 'route': 'about/'},
+    {'href': 'contacts', 'name': 'Контакты', 'route': 'contacts/'},
+]
 
 
 def login(request):
@@ -28,6 +36,7 @@ def login(request):
             return HttpResponseRedirect(reverse('index'))
 
     context = {
+        'links_menu': links_menu,
         'title': title,
         'login_form': login_form,
         'next': _next,
@@ -49,6 +58,7 @@ def register(request):
         register_form = ShopUserRegisterForm()
 
     context = {
+        'links_menu': links_menu,
         'title': title,
         'register_form': register_form,
     }
@@ -69,6 +79,7 @@ def edit(request):
         edit_form = ShopUserEditForm(instance=request.user)
 
     context = {
+        'links_menu': links_menu,
         'title': title,
         'edit_form': edit_form,
     }
